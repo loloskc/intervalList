@@ -66,18 +66,12 @@ namespace WindowsFormsApp5
                 int kolIf = 0;
                 for(int j = 0; j < checkInt; j++)
                 {
-                    if (a <= num[j] && a + lenthInt > num[j]) kolIf++;
+                    if (a <= num[j] && a + lenthInt > num[j]) kolIf++; // под счет совпадений в промежутке i
                 }
-                dataGridView1.Rows[i].Cells[1].Value = kolIf;
+                dataGridView1.Rows[i].Cells[1].Value = kolIf; // вывод количество чисел попадающие в частичный интервал
                 a += lenthInt;
             }
-            
-   
-           
-
-
-
-
+  
         }
     }
 }
