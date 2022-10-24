@@ -21,7 +21,7 @@ namespace WindowsFormsApp5
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var readsFile = new StreamReader("C:/logs.txt");    //путь файл
+            var readsFile = new StreamReader("C:/logs2.txt");    //путь файл
             int amountLitter = 0;
             int checkInt = 0;   // счетчик записей
             string str = readsFile.ReadToEnd(); // чтение файла
@@ -67,7 +67,10 @@ namespace WindowsFormsApp5
                 for(int j = 0; j < checkInt; j++)
                 {
                     if (a <= num[j] && a + lenthInt > num[j]) kolIf++; // под счет совпадений в промежутке i
+                    if (num[j] == num[checkInt-1])
+                    if (num[checkInt - 1] == a + lenthInt) kolIf++;
                 }
+                
                 dataGridView1.Rows[i].Cells[1].Value = kolIf; // вывод количество чисел попадающие в частичный интервал
                 a += lenthInt;
             }
